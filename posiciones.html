@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica de Posiciones</title>
+    <link rel="stylesheet" href="estilos21.09.26.css">
+    <style>
+
+        .seccion-practica {
+            padding: 20px;
+            background-color: #f9f9f9;
+            margin: 20px auto;
+            max-width: 800px;
+            color: #333;
+        }
+
+        .seccion-practica h3 { margin-top: 30px; }
+
+        /* Cajas base */
+        .box-orange { background: orange; height: 100px; width: 100px; border: 1px solid #d35400;}
+        .box-blue { background: lightskyblue; height: 100px; width: 100px; border: 1px solid #2980b9;}
+
+        /* 1. Relative */
+        .box-orange-relative {
+            position: relative;
+            background: orange;
+            width: 100px;
+            height: 100px;
+            top: 20px;
+            left: 50px;
+        }
+
+        /* 2. Absolute y su Contenedor */
+        .container {
+            position: relative;
+            background: lightgray;
+            height: 150px;
+            border: 2px dashed #999;
+        }
+        .box-orange-absolute {
+            position: absolute;
+            background: orange;
+            width: 100px;
+            height: 100px;
+            right: 5px;
+            top: 5px;
+        }
+
+        /* 3. Fixed */
+        .box-orange-fixed {
+            position: fixed;
+            background: orange;
+            width: 100px;
+            height: 100px;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            border: 3px solid red;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* 4. Sticky */
+        .box-sticky {
+            position: sticky;
+            top: 0;
+            background: #ffeb3b;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            border-bottom: 2px solid #ccc;
+            z-index: 1; 
+        }
+    </style>
+</head>
+<body>
+    <header><img src="fondo.jpg" alt="Fondo"></header>
+    
+    <nav style="position: relative; z-index: 999;">
+        <ul>
+            <li><a href="#">Conóceme</a>
+                <ul>
+                    <li><a href="Informacion.html">Información personal</a></li>
+                    <li><a href="pasatiempos.html">Pasatiempos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Segunda parcial</a>
+                 <ul>
+                    <li><a href="#">Práctica uno</a></li> 
+                    <li><a href="posiciones.html">Práctica de posiciones</a></li>
+                    <li><a href="mundodigital.html">Mi mundo digital</a></li>
+                 </ul>
+            </li>
+            <li><a href="#">Tercer parcial</a></li>
+        </ul>
+    </nav>
+
+    <section style="display: block;">
+        
+        <div class="seccion-practica">
+            <div class="box-sticky">Soy una caja Sticky: Al hacer scroll hacia abajo, me quedaré pegada en la parte superior.</div>
+            
+            <h2>Práctica de Propiedad Position en CSS</h2>
+            <p>Ejemplos basados en el artículo de freeCodeCamp.</p>
+
+            <h3>1. Position: Static (Valor por defecto)</h3>
+            <p>Se colocan en un orden normal en la página web.</p>
+            <div class="box-orange"></div>
+            <div class="box-blue" style="position: static;"></div>
+
+            <h3>2. Position: Relative</h3>
+            <p>Se mueve en relación con su posición original (top: 20px, left: 50px).</p>
+            <div class="box-orange-relative"></div>
+            <div class="box-blue"></div>
+
+            <h3>3. Position: Absolute</h3>
+            <p>Se posiciona en relación a su elemento padre (.container que tiene position: relative).</p>
+            <div class="container">
+                <div class="box-orange-absolute"></div>
+                <div class="box-blue"></div>
+            </div>
+
+            <!-- Caja Fixed -->
+            <div class="box-orange-fixed">Soy una caja Fixed (siempre visible)</div>
+            
+            <br><br><br><br><br> 
+        </div>
+    </section>
+
+    <footer>
+        <img src="logo.ucol.png" alt="Logo de la Universidad de Colima">
+        <div>
+            <p><strong>Universidad de Colima</strong></p>
+            <p>Bachillerato 8</p>
+            <p>Programación en internet</p>
+        </div>
+    </footer>
+</body>
+</html>

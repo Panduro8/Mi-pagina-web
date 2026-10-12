@@ -1,0 +1,92 @@
+:root {
+    --color-nav: #103f6e;               /* Azul marino */
+    --color-nav-hover: #d97706;         /* Naranja/Dorado cálido */
+    --color-submenu: #0b2e52;           /* Azul marino oscuro */
+    --color-footer: #333333;            /* Gris oscuro */
+    --color-texto-blanco: #ffffff;      /* Blanco */
+    --color-fondo-principal: #faf6f0;   /* Tono arena suave */
+    --color-borde-principal: #e8d7c3;   /* Borde cálido */
+    --color-fondo-secundario: #eaf2f8;   /* Azul claro muy suave */
+    --color-borde-secundario: #b8cdde;   /* Borde azulado suave */
+}
+
+/* Estilos Generales */
+body{
+    margin: 0;
+}
+/*Estilos del encabezado */
+header{
+    width: 100%;
+    height: 220px;
+}
+header img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+/*Estilos del menú*/
+nav{
+    background-color: var(--color-nav);
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav > ul{
+    display: flex;
+}
+nav li{
+    position: relative;
+}
+nav a {
+    display: block;
+    color: var(--color-texto-blanco);
+    text-decoration: none;
+    padding: 15px 20px;
+}
+nav a:hover{
+    background-color: var(--color-nav-hover);
+}
+/*Estilos del submenu*/
+nav li ul{
+    display: none;
+    position: absolute;
+    background-color: var(--color-submenu);
+    min-width: 180px;
+}
+nav li:hover ul{
+    display: block;
+}
+/*Estilos del pie de página*/
+footer{
+    background-color: var(--color-footer);
+    color: var(--color-texto-blanco);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+footer img{
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+/*Estilos para el cuerpo de página*/ 
+section{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    min-width: 350px;
+}
+.principal{
+    width: 70%;
+    background-color: var(--color-fondo-principal);
+    padding: 20px;
+    border: 2px solid var(--color-borde-principal);
+}
+.secundario{
+    width: 30%;
+    background-color: var(--color-fondo-secundario);
+    padding: 20px;
+    border: 2px solid var(--color-borde-secundario);
+}
