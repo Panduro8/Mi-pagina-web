@@ -4,81 +4,6 @@
     <meta charset="UTF-8">
     <title>Conversor de temperaturas</title>
     <link rel="stylesheet" href="estilos21.09.26.css">
-    <style>
-        .principal {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
-            box-sizing: border-box;
-        }
-
-        .card-conversor {
-            background-color: #ffffff;
-            width: 100%;
-            max-width: 380px;
-            padding: 35px 30px;
-            border-radius: 16px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-            text-align: center;
-            box-sizing: border-box;
-        }
-
-        .card-conversor h2 {
-            font-family: Georgia, serif;
-            font-size: 24px;
-            font-weight: bold;
-            color: #111111;
-            margin-top: 0;
-            margin-bottom: 25px;
-        }
-
-        .campo-grupo {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .campo-grupo label {
-            font-family: Georgia, serif;
-            font-size: 16px;
-            color: #222222;
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        .campo-grupo input {
-            width: 100%;
-            padding: 10px 14px;
-            border: 1.5px solid #2e7d32;
-            border-radius: 8px;
-            font-size: 14px;
-            outline: none;
-            box-sizing: border-box;
-            color: #333333;
-            background-color: #ffffff;
-        }
-
-        .campo-grupo input::placeholder {
-            color: #999999;
-        }
-
-        .btn-convertir {
-            background-color: #41a645;
-            color: #ffffff;
-            border: none;
-            padding: 10px 28px;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.2s ease;
-            margin-top: 5px;
-        }
-
-        .btn-convertir:hover {
-            background-color: #338a37;
-        }
-    </style>
 </head>
 <body>
     <header><img src="fondo.jpg" alt="Encabezado"></header>
@@ -108,23 +33,27 @@
     </nav>
     <section>
         <aside class="principal">
-            <div class="card-conversor">
-                <h2>Conversor de temperaturas</h2>
-                
-                <form id="conversorForm" onsubmit="return false;">
-                    <div class="campo-grupo">
-                        <label for="celsius">Celsius:</label>
-                        <input type="number" id="celsius" step="any" placeholder="Ingresa la temperatura en Celsius:">
-                    </div>
+            <h2>Conversor de temperaturas</h2>
+            
+            <form id="conversorForm" onsubmit="return false;">
+                <div>
+                    <label for="temperatura">Ingresa la temperatura:</label><br>
+                    <input type="number" id="temperatura" step="any" placeholder="Ejemplo: 30">
+                </div>
+                <br>
+                <div>
+                    <label for="tipoConversion">Tipo de conversión:</label><br>
+                    <select id="tipoConversion">
+                        <option value="cToF">Celsius a Fahrenheit (°C ➔ °F)</option>
+                        <option value="fToC">Fahrenheit a Celsius (°F ➔ °C)</option>
+                    </select>
+                </div>
+                <br>
+                <button type="button" id="btnConvertir">Convertir</button>
+            </form>
 
-                    <div class="campo-grupo">
-                        <label for="fahrenheit">Fahrenheit:</label>
-                        <input type="number" id="fahrenheit" step="any" placeholder="Ingresa la temperatura en Fahrenheit:">
-                    </div>
-
-                    <button type="button" id="btnConvertir" class="btn-convertir">Convertir</button>
-                </form>
-            </div>
+            <br>
+            <div id="resultado"></div>
         </aside>
     </section>
     <footer>
