@@ -33,27 +33,31 @@
     </nav>
     <section>
         <aside class="principal">
-            <h2>Conversor de temperaturas</h2>
-            
-            <form id="conversorForm" onsubmit="return false;">
-                <div>
-                    <label for="temperatura">Ingresa la temperatura:</label><br>
-                    <input type="number" id="temperatura" step="any" placeholder="Ejemplo: 30">
-                </div>
-                <br>
-                <div>
-                    <label for="tipoConversion">Tipo de conversión:</label><br>
-                    <select id="tipoConversion">
-                        <option value="cToF">Celsius a Fahrenheit (°C ➔ °F)</option>
-                        <option value="fToC">Fahrenheit a Celsius (°F ➔ °C)</option>
-                    </select>
-                </div>
-                <br>
-                <button type="button" id="btnConvertir">Convertir</button>
-            </form>
+            <div class="card-conversor">
+                <h2>Conversor de temperaturas</h2>
+                
+                <form id="conversorForm" onsubmit="return false;">
+                    <div class="campo-grupo">
+                        <label for="temperatura">Ingresa la temperatura:</label>
+                        <input type="number" id="temperatura" step="any" placeholder="Ejemplo: 30">
+                    </div>
 
-            <br>
-            <div id="resultado"></div>
+                    <div class="campo-grupo">
+                        <label for="tipoConversion">Tipo de conversión:</label>
+                        <select id="tipoConversion">
+                            <option value="cToF">Celsius a Fahrenheit (°C ➔ °F)</option>
+                            <option value="fToC">Fahrenheit a Celsius (°F ➔ °C)</option>
+                        </select>
+                    </div>
+
+                    <button type="button" id="btnConvertir" class="btn-convertir">Convertir</button>
+                </form>
+
+                <div id="resultado" class="resultado-box"></div>
+            </div>
+        </aside>
+        <aside class="secundario">
+            <iframe width="100%" height="300" src="https://www.youtube.com/embed/glaFn_mdqdQ?si=_jmEyf1Qhx4vXMck" title="El Cacahuatazo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </aside>
     </section>
     <footer>
