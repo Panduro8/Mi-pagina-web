@@ -28,7 +28,6 @@ document.getElementById('btnConvertir').addEventListener('click', function() {
 
     divResultado.innerHTML = `
         <p><strong>Temperatura ingresada:</strong> ${temperatura} ${unidadOrigen}</p>
-        <p><strong>Tipo de conversión:</strong> ${tipoConversion === 'cToF' ? 'Celsius a Fahrenheit' : 'Fahrenheit a Celsius'}</p>
         <p><strong>Resultado:</strong> ${resultadoFormateado} ${unidadDestino}</p>
     `;
 });
